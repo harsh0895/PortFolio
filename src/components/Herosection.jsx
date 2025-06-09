@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import heroImage from '../assets/LOGO.jpeg';
-import resume from '../assets/Resume_final.pdf';
+import resume from '../assets/Resume_DE.pdf';
 
 const HeroSection = ({ isDarkMode }) => (
   <section
