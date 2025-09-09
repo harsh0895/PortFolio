@@ -39,7 +39,9 @@ const SkillsSection = ({ isDarkMode }) => {
       >
         Skills
       </motion.h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+      {/* Added padding for left & right margins */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 max-w-6xl mx-auto px-6 sm:px-12">
         {skills.map((skill, index) => (
           <motion.div
             key={index}

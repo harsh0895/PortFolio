@@ -41,7 +41,9 @@ const ContactSection = ({ isDarkMode }) => {
       <h2 className={`text-4xl font-semibold text-center mb-8 underline underline-offset-8 ${isDarkMode ? 'decoration-orange-500' : 'decoration-blue-500'}`}>
         Contact Me
       </h2>
-      <form className="max-w-md mx-auto bg-gray-300 p-8 rounded-2xl shadow-lg">
+
+      {/* Contact Form */}
+      <form className="w-[90%] sm:w-[80%] lg:w-[60%] mx-auto bg-gray-300 p-6 sm:p-8 rounded-2xl shadow-lg">
         <input
           type="text"
           placeholder="Name"
@@ -66,14 +68,14 @@ const ContactSection = ({ isDarkMode }) => {
 
       {/* Social Profiles Section */}
       <div className="mt-16 text-center">
-        <div className="flex justify-center space-x-12">
+        <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 px-4">
           {profiles.map((profile, index) => (
             <a
               key={index}
               href={profile.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center group"
+              className="flex flex-col items-center group w-20"
             >
               <div
                 className={`w-12 h-12 rounded-full flex justify-center items-center transition duration-200 ${
@@ -82,7 +84,13 @@ const ContactSection = ({ isDarkMode }) => {
               >
                 {profile.icon}
               </div>
-              <span className={`mt-2 text-lg font-serif font-bold ${isDarkMode ? 'text-orange-500 group-hover:text-orange-400' : 'text-blue-500 group-hover:text-blue-400'}`}>
+              <span
+                className={`mt-2 text-sm sm:text-base font-serif font-bold ${
+                  isDarkMode
+                    ? 'text-orange-500 group-hover:text-orange-400'
+                    : 'text-blue-500 group-hover:text-blue-400'
+                }`}
+              >
                 {profile.name}
               </span>
             </a>
